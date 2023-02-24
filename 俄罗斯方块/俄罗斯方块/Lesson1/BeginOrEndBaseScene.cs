@@ -44,7 +44,7 @@ namespace 俄罗斯方块
                         nowSelIndex = 1;
                     }
                     break;
-                case ConsoleKey.J:
+                case ConsoleKey.Enter:
                     EnterJDoSomthing();
                     break;
             }

@@ -1,0 +1,15 @@
+E:\C#\C#版-俄罗斯方块\俄罗斯方块\俄罗斯方块\obj\Debug\net6.0\俄罗斯方块.csproj.AssemblyReference.cache
+E:\C#\C#版-俄罗斯方块\俄罗斯方块\俄罗斯方块\obj\Debug\net6.0\俄罗斯方块.GeneratedMSBuildEditorConfig.editorconfig
+E:\C#\C#版-俄罗斯方块\俄罗斯方块\俄罗斯方块\obj\Debug\net6.0\俄罗斯方块.AssemblyInfoInputs.cache
+E:\C#\C#版-俄罗斯方块\俄罗斯方块\俄罗斯方块\obj\Debug\net6.0\俄罗斯方块.AssemblyInfo.cs
+E:\C#\C#版-俄罗斯方块\俄罗斯方块\俄罗斯方块\obj\Debug\net6.0\俄罗斯方块.csproj.CoreCompileInputs.cache
+E:\C#\C#版-俄罗斯方块\俄罗斯方块\俄罗斯方块\bin\Debug\net6.0\俄罗斯方块.exe
+E:\C#\C#版-俄罗斯方块\俄罗斯方块\俄罗斯方块\bin\Debug\net6.0\俄罗斯方块.deps.json
+E:\C#\C#版-俄罗斯方块\俄罗斯方块\俄罗斯方块\bin\Debug\net6.0\俄罗斯方块.runtimeconfig.json
+E:\C#\C#版-俄罗斯方块\俄罗斯方块\俄罗斯方块\bin\Debug\net6.0\俄罗斯方块.dll
+E:\C#\C#版-俄罗斯方块\俄罗斯方块\俄罗斯方块\bin\Debug\net6.0\俄罗斯方块.pdb
+E:\C#\C#版-俄罗斯方块\俄罗斯方块\俄罗斯方块\obj\Debug\net6.0\俄罗斯方块.dll
+E:\C#\C#版-俄罗斯方块\俄罗斯方块\俄罗斯方块\obj\Debug\net6.0\refint\俄罗斯方块.dll
+E:\C#\C#版-俄罗斯方块\俄罗斯方块\俄罗斯方块\obj\Debug\net6.0\俄罗斯方块.pdb
+E:\C#\C#版-俄罗斯方块\俄罗斯方块\俄罗斯方块\obj\Debug\net6.0\俄罗斯方块.genruntimeconfig.cache
+E:\C#\C#版-俄罗斯方块\俄罗斯方块\俄罗斯方块\obj\Debug\net6.0\ref\俄罗斯方块.dll
