@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace 俄罗斯方块
 {
-    class BlockInfo(){
+    class BlockInfo{
         //方块信息坐标容器
         private List<Position[]> list;
         

@@ -65,5 +65,11 @@ namespace 俄罗斯方块
         {
             this.drawType = drawType;
         }
+
+        public void ClearDraw()
+        {
+            Console.SetCursorPosition(pos.x, pos.y);
+            Console.WriteLine("  ");
+        }
     }
 }

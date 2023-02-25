@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Lesson2"
+    "\\Lesson1",
+    "\\Lesson2",
+    "\\Lesson3",
+    "\\Lesson4",
+    "\\Lesson5"
   ],
-  "SelectedNode": "\\Lesson2",
+  "SelectedNode": "\\Lesson1\\GameScene.cs",
   "PreviewInSolutionExplorer": false
 }
