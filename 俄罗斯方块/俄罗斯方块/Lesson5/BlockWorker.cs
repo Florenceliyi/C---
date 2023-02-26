@@ -204,7 +204,7 @@ namespace 俄罗斯方块
             for (int i = 0; i < blocks.Count; i++)
             {
                 pos = blocks[i].pos + movePos;
-                for (int j = 0; j < dynamicWalls.Count; j++)
+                for (int j = 0; j < map.dynamicWalls.Count; j++)
                 {
                     if (pos == map.dynamicWalls[j].pos)
                     {
@@ -212,6 +212,63 @@ namespace 俄罗斯方块
                     }
                 }
             }
+            return true;
+        }
+        #endregion
+
+        #region 方块自动向下移动
+        public void AutoMove()
+        {
+            //变之前擦除
+            ClearDraw();
+            //得到所有方块让其向下移动
+            for(int i = 0; i< blocks.Count; i++)
+            {
+                //Y轴向下移动
+                blocks[i].pos.y += 1;
+            }
+
+            //变了之后再画
+            Draw();
+        }
+
+        public bool CanMove(Map map)
+        {
+            //临时变量存储下一次移动的位置用于重合判断
+            Position movePos = new Position(0, 1);
+            Position pos;
+            //边界
+            for(int i = 0; i<blocks.Count; i++)
+            {
+                pos = blocks[i].pos + movePos;
+                if(pos.y >= map.h)
+                {
+                    //停下来 变成地图动态方块
+                    map.AddWalls(blocks);
+
+                    //随机创建新的方块
+                    RandomCreateBlock();
+                    return false;
+                }
+            }
+            //动态方块
+            for (int i = 0; i < blocks.Count; i++)
+            {
+                pos = blocks[i].pos + movePos;
+                for (int j = 0; j < map.dynamicWalls.Count; j++)
+                {
+                    if (pos == map.dynamicWalls[j].pos)
+                    {
+                        //停下来 变成地图动态方块
+                        map.AddWalls(blocks);
+
+                        //随机创建新的方块
+                        RandomCreateBlock();
+                        return false;
+                    }
+                }
+            }
+
             return true;
         }
         #endregion

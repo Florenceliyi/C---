@@ -32,6 +32,7 @@ namespace 俄罗斯方块
         }
         public void Draw()
         {
+            if (pos.y < 0) return;
             Console.SetCursorPosition(pos.x, pos.y);
             switch (drawType)
             {
@@ -68,6 +69,7 @@ namespace 俄罗斯方块
 
         public void ClearDraw()
         {
+            if (pos.y < 0) return;
             Console.SetCursorPosition(pos.x, pos.y);
             Console.WriteLine("  ");
         }
