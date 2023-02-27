@@ -48,18 +48,23 @@ namespace 俄罗斯方块
                                 break;
                             case ConsoleKey.A:
                                 if (blockWorker.CanMoveRL(E_Change_Type.left, map))
-                                    blockWorker.MoveRL(E_Change_Type.left, map);
+                                    blockWorker.MoveRL(E_Change_Type.left);
                                 break;
-                            case ConsoleKey.B:
+                            case ConsoleKey.D:
                                 if (blockWorker.CanMoveRL(E_Change_Type.right, map))
-                                    blockWorker.MoveRL(E_Change_Type.right, map);
+                                    blockWorker.MoveRL(E_Change_Type.right);
                                 break;
-                            case ConsoleKey.S:
+                            case ConsoleKey.DownArrow:
                                 //向下动
                                 if (blockWorker.CanMove(map))
                                     blockWorker.AutoMove();
                             break;
-                            default:
+                        case ConsoleKey.S:
+                            //向下动
+                            if (blockWorker.CanMove(map))
+                                blockWorker.AutoMove();
+                            break;
+                        default:
                                 break;
                         }
                     }

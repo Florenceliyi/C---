@@ -26,6 +26,7 @@ namespace 俄罗斯方块
 
         public BlockWorker()
         {
+            //初始化砖块信息
             blockInfoDic = new Dictionary<E_DrawType, BlockInfo>()
            {
                {E_DrawType.Cube, new BlockInfo(E_DrawType.Cube) },
@@ -36,7 +37,12 @@ namespace 俄罗斯方块
                {E_DrawType.Left_Long_Ladder, new BlockInfo(E_DrawType.Left_Long_Ladder) },
                {E_DrawType.Right_Long_Ladder, new BlockInfo(E_DrawType.Right_Long_Ladder) },
            };
+
+            //随机方块
+            RandomCreateBlock();
         }
+
+
         public void RandomCreateBlock()
         {
         //随机方块类型
@@ -52,7 +58,7 @@ namespace 俄罗斯方块
 
             };
             //初始化方块的位置，方块list的第0个就是远点方块
-            blocks[0].pos = new Position(24, 5);
+            blocks[0].pos = new Position(24, -5);
             //取出方块形态信息进行具体随机
             currentBlockInfo = blockInfoDic[type];
             //随机几种形态设置方块信息
@@ -68,7 +74,6 @@ namespace 俄罗斯方块
 
         public void Draw()
         {
-            Console.WriteLine(blocks);
             for (int i = 0; i < blocks.Count; i++)
             {
 
@@ -101,6 +106,16 @@ namespace 俄罗斯方块
                 default:
                     break;
             }
+
+            //得到索引目的 是得到对应形态的 位置偏移信息
+            //用于设置另外的三个小方块
+            Position[] pos = currentBlockInfo[currentInfoIndex];
+            //将另外的三个小方块进行设置 计算
+            for (int i = 0; i < pos.Length; i++)
+            {
+                //取出来的pos是相对原点方块的坐标 所以需要进行计算
+                blocks[i + 1].pos = blocks[0].pos + pos[i];
+            }
             //得到位置偏移信息,用于设置另外三个小方块
             Draw();
             
@@ -114,9 +129,13 @@ namespace 俄罗斯方块
             }
         }
 
+        
+
         //判断是否能变形
         public bool CanChange(E_Change_Type type, Map map)
         {
+            //用一个临时变量记录 当前索引 不变化当前索引
+            //变化这个临时变量
             int currentIndex = currentInfoIndex;
 
             switch (type)
@@ -170,8 +189,10 @@ namespace 俄罗斯方块
         #endregion
 
         #region 方块左右移动
-        public void MoveRL(E_Change_Type type, Map map)
+        public void MoveRL(E_Change_Type type)
         {
+            //在动之前 要得到原来的坐标 进行擦除
+            ClearDraw();
             //根据传入的类型决定左动还是右动
             Position movePos = new Position(type == E_Change_Type.left ? -2 : 2, 0);
             for(int i = 0; i< blocks.Count; i++)

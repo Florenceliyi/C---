@@ -31,6 +31,7 @@ namespace 俄罗斯方块
             for(int i = 0; i < Game.w; i+=2)
             {
                 walls.Add(new DrawObject(E_DrawType.Wall, i, h));
+                ++w;
             }
             w -= 2;
             for(int i = 0; i< h; i++)
